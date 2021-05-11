@@ -1,0 +1,4 @@
+R5T.D0058.Base - Base service definitions library for AWS S3 related services.
+
+Goals
+
