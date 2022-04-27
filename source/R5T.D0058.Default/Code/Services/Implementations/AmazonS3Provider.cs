@@ -5,11 +5,13 @@ using Amazon.Runtime;
 using Amazon.S3;
 
 using R5T.D0057;
+using R5T.T0064;
 
 
 namespace R5T.D0058
 {
-    public class AmazonS3Provider : IAmazonS3Provider
+    [ServiceImplementationMarker]
+    public class AmazonS3Provider : IAmazonS3Provider, IServiceImplementation
     {
         private AWSCredentials AWSCredentials { get; }
         private IRegionEndpointProvider RegionEndpointProvider { get; }

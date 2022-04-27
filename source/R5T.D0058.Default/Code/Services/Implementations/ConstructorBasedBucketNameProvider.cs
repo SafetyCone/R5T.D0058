@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Threading.Tasks;
 
+using R5T.T0064;
+
 
 namespace R5T.D0058
 {
-    public class ConstructorBasedBucketNameProvider : IBucketNameProvider
+    [ServiceImplementationMarker]
+    public class ConstructorBasedBucketNameProvider : IBucketNameProvider, IServiceImplementation
     {
         private BucketName BucketName { get; }
 
 
-        public ConstructorBasedBucketNameProvider(BucketName bucketName)
+        [ServiceImplementationConstructorMarker]
+        public ConstructorBasedBucketNameProvider(
+            [NotServiceComponent] BucketName bucketName)
         {
             this.BucketName = bucketName;
         }

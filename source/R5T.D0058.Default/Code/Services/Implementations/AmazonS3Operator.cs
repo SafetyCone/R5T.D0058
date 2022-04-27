@@ -12,12 +12,14 @@ using Amazon.S3.Transfer;
 using Amazon.S3.Util;
 
 using R5T.Magyar;
-using R5T.Magyar.IO;
+
+using R5T.T0064;
 
 
 namespace R5T.D0058
 {
-    public class AmazonS3Operator : IAmazonS3Operator
+    [ServiceImplementationMarker]
+    public class AmazonS3Operator : IAmazonS3Operator, IServiceImplementation
     {
         public async Task<bool> CreateBucket(IAmazonS3 s3, BucketName bucketName)
         {

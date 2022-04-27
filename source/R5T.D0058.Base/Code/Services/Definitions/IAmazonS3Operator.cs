@@ -9,10 +9,13 @@ using Amazon.S3.Model;
 
 using R5T.Magyar;
 
+using R5T.T0064;
+
 
 namespace R5T.D0058
 {
-    public interface IAmazonS3Operator
+    [ServiceDefinitionMarker]
+    public interface IAmazonS3Operator : IServiceDefinition
     {
         #region Buckets
 
