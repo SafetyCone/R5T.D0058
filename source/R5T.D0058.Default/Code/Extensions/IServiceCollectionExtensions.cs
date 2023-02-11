@@ -24,7 +24,7 @@ namespace R5T.D0058
         }
 
         /// <summary>
-        /// Adds the <see cref="ConstructorBasedS3BucketNameProvider"/> implementation of <see cref="IS3BucketNameProvider"/> as a <see cref="ServiceLifetime.Singleton"/>.
+        /// Adds the <see cref="ConstructorBasedBucketNameProvider"/> implementation of <see cref="IBucketNameProvider"/> as a <see cref="ServiceLifetime.Singleton"/>.
         /// </summary>
         public static IServiceAction<IBucketNameProvider> AddConstructorBasedBucketNameProviderAction(this IServiceCollection services, string bucketName)
         {
